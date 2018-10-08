@@ -15,7 +15,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
   
   Turn on vnc inside raspberry pi, the latest version has it built in!  
   
-    open CMD:  
+  open CMD:  
 ```
       sudo raspi-config
       (Interfacing Options > VNC > Enable > Yes)
@@ -47,25 +47,25 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
   https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address/74428#74428  
   **dhcpcd method**
 
-    open CMD:
-      ```
+  open CMD:
+```
       (get IP address, need that /# after the ip address)
       ip -4 addr show | grep global
 
       (get default IP address of router)
       ip route | grep default | awk '{print $3}'
-      ```
-    Edit /etc/dhcpcd.conf as follows:
+```
+  Edit /etc/dhcpcd.conf as follows:
 
-      open CMD:
-        ```
+  open CMD:
+```
         sudo nano /etc/dhcpcd.conf
           (I put this in the very top)
           interface wlan0
           static ip_address=192.168.x.x/x
           static routers=192.168.x.x
           static domain_name_servers=192.168.x.x
-        ```
+```
 
 ***************************************************************************
 
@@ -83,18 +83,16 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
 
   This installs Xinput for touchscreen calibration and uses it.  
 
-    open CMD:  
+  open CMD:  
 ```
-      cd LCD-show/
+    cd LCD-show/
         sudo dpkg -i -B xinput-calibrator_0.7.5-1_armhf.deb
 ```
-
-        (click on the 4 corners to get inputs, e.g. 341 65331 1004 65858)
+  (click on the 4 corners to get inputs, e.g. 341 65331 1004 65858)
 ```
         DISPLAY=:0.0 xinput_calibrator
 ```
-
-        (copy inputs here)
+  (copy inputs here)
 ```
         sudo nano /etc/X11/xorg.conf.d/99-calibration.conf
 ```
@@ -115,7 +113,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
       sudo nano /usr/share/X11/xorg.conf.d/10-evdev.conf, so I deleted the copies  
       Then I added --> Option "SwapAxes" "1" and Option "InvertY" "1"  
 
-      open CMD:  
+  open CMD:  
 ```
         sudo nano /usr/share/X11/xorg.conf.d/10-evdev.conf
           Section "InputClass"
@@ -128,24 +126,25 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
           EndSection
 ```
 
-    **troubleshooting #2:**    
-      I actually plugged in the power into the LCD touchscreen itself, never even noticed.
-      I don't think this made a difference, but I unplugged it then put the power into the raspi instead.
+  **troubleshooting #2:**    
+    I actually plugged in the power into the LCD touchscreen itself, never even noticed.  
+    I don't think this made a difference, but I unplugged it then put the power into the raspi instead.  
 
-    **troubleshooting #3:**     
-      Redid the instructions to turn on the LCD.
+  **troubleshooting #3:**     
+  Redid the instructions to turn on the LCD.  
 
-      Turned back to HDMI mode:  
-        open CMD:  
+  Turned back to HDMI mode:  
+  
+  open CMD:  
 ```
           cd lcd/LCD-show
             chmod 777 LCD-hdmi
             sudo ./LCD-hdmi
             (reboots by itself from the script)
 ```
-      Turned on LCD mode:  
+  Turned on LCD mode:  
+  open CMD:  
 ```
-        open CMD:  
           cd lcd/LCD-show
             sudo ./MPI3508_480_320-show
 ```
