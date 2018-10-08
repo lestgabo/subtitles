@@ -4,6 +4,7 @@ by Lestley Gabo
 Using Android Things with Raspberry Pi 3b  
 
 ***************************************************************************
+***************************************************************************
 **Using MPI3508 LCD touchscreen for Raspberry Pi ordered from Amazon.ca  
 STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
 ***************************************************************************
@@ -27,6 +28,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
     As per the link above, an easy way to find raspi IP is to use Advanced IP Scanner.
 
 ***************************************************************************
+***************************************************************************
 
 **For turning on LCD:**  
 
@@ -40,6 +42,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
       cd LCD-show/
         sudo ./MPI3508_480_320-show
 ```
+***************************************************************************
 ***************************************************************************
 
 **For static IP:**  
@@ -67,6 +70,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
           static domain_name_servers=192.168.x.x
 ```
 
+***************************************************************************
 ***************************************************************************
 
 **For LCD calibration:**  
@@ -97,6 +101,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
         sudo nano /etc/X11/xorg.conf.d/99-calibration.conf
 ```
 
+***************************************************************************
 ***************************************************************************
 
 **For inverted inputs:**    
