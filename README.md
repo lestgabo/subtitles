@@ -10,7 +10,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
 ***************************************************************************
 ***************************************************************************
 
-**For Headless mode:**  
+# **For Headless mode:**  
   This link was helpful:  
   http://www.circuitbasics.com/access-raspberry-pi-desktop-remote-connection/  
   
@@ -30,7 +30,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
 ***************************************************************************
 ***************************************************************************
 
-**For turning on LCD:**  
+# **For turning on LCD:**  
 
   open CMD:  
 ```
@@ -45,7 +45,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
 ***************************************************************************
 ***************************************************************************
 
-**For static IP:**  
+# **For static IP:**  
   This link was helpful:  
   https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address/74428#74428  
   **dhcpcd method**
@@ -73,7 +73,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
 ***************************************************************************
 ***************************************************************************
 
-**For LCD calibration:**  
+# **For LCD calibration:**  
   This link was helpful:  
     http://www.circuitbasics.com/raspberry-pi-touchscreen-calibration-screen-rotation/  
   This updates the calibration tools used, I think.  
@@ -104,7 +104,7 @@ STEPS FOLLOWED TO MAKE LCD TOUCHSCREEN FUNCTION (IMPORTANT):**
 ***************************************************************************
 ***************************************************************************
 
-**For inverted inputs:**    
+# **For inverted inputs:**    
   This link was helpful:  
   http://www.circuitbasics.com/raspberry-pi-touchscreen-calibration-screen-rotation/  
   I already followed the LCD calibration above.  
