@@ -103,8 +103,10 @@ For LCD calibration:
 ***************************************************************************
 
 For inverted inputs:
+
   This link was helpful:
   http://www.circuitbasics.com/raspberry-pi-touchscreen-calibration-screen-rotation/
+
   I already followed the LCD calibration above.
   My calibration was correct, but had an issue of touchscreen input going up when stylus goes down and vice versa.
   This also happens when I go left on the stylus, the input goes right and vice versa.
